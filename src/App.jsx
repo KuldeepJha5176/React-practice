@@ -10,22 +10,14 @@ function App() {
 function Counter() 
 {
   const [count, setCount] = useState(0);
-  function increaseCount() {
+  setInterval(function () {//here whenever the state changes react re-rendering the counter component
     setCount(count + 1);
-  }
-  function decreaseCount() {
-    setCount(count - 1);
-  }
-  function ResetCount() {
-    setCount(0);
-  }
-return(
+  },1000)
+  
+  return(
   <div>
     <h1 id="text">{count}</h1>
-    <button onClick ={increaseCount}>count increase</button>
-    <button onClick ={decreaseCount}>count decrease</button>
-    <button onClick ={ResetCount}>Reset</button>
-  </div>
-     )
-}
+    </div>
+  )
+  }
 export default App
