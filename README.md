@@ -1,5 +1,7 @@
-create the first basic application of counter
+1.create the first basic application of counter
 <br>
-created stopwatch
+2.created stopwatch
 <br>
-conditional rendering learned
+3.conditional rendering learned
+<br>
+4.learned about unmounting and cleanups

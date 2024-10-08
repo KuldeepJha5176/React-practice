@@ -21,11 +21,16 @@ function App() {
 function Counter() {
   const [count, setCount] = useState(0);
   useEffect(function(){
-      setInterval(function () {   
+     let clock = setInterval(function () { 
+        console.log("from inside the interval")  
         setCount(count => count + 1 );
+        
       }, 1000)
       console.log("mounted"); 
-    
+
+    return function(){
+      clearInterval(clock)
+    }
   },[]);
     
   return(
